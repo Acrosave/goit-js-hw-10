@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet"></link>
     <title>Homework 10</title>
   </head>
   <body>
-    <select class="breed-select" id="idSelect">
-      <option value=""></option>
-    </select>
-    <p class="loader">Loading data, please wait...</p>
-    <p class="error">Oops! Something went wrong! Try reloading the page!</p>
-    <div class="cat-info"></div>
+    <select class="breed-select" id="idSelect"></select>
+    <p class="loader hidden"></p>
+    <p class="error hidden">
+      Oops! Something went wrong! Try reloading the page!
+    </p>
+    <div class="cat-info" id="catInfo"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
     <script src="./index.js" type="module"></script>
   </body>
 </html>

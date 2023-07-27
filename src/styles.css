@@ -1,0 +1,137 @@
+.hidden {
+  display: none;
+}
+
+.breed-select {
+  margin-bottom: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: transparent;
+  border-style: none;
+  font-size: 20px;
+}
+
+body {
+  background-image: linear-gradient(
+    102.1deg,
+    rgba(96, 221, 142, 1) 8.7%,
+    rgba(24, 138, 141, 1) 88.1%
+  );
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cat-info {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.cat-description {
+  border: solid rgb(10, 15, 7);
+  border-style: double;
+  border-radius: 50px;
+  width: 500px;
+  text-align: center;
+  padding: 20px;
+}
+.cat-description:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+.Breed-message {
+  margin: 0;
+  padding: 0;
+}
+
+.blur-up {
+  filter: blur(5px);
+  transition: filter 400ms;
+}
+
+.blur-up.lazyloaded {
+  filter: blur(0);
+}
+
+img {
+  border-style: ridge;
+  border-radius: 25px;
+  box-shadow: 1px 2px 10px rgb(0, 0, 0);
+}
+img:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+.loader {
+  animation: rotate 1s infinite;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: 170px;
+  left: 650px;
+}
+
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1s infinite;
+  background-color: #fff;
+  box-shadow: 30px 0 0 rgba(96, 221, 142, 1);
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1s infinite;
+  background-color: rgba(96, 221, 142, 1);
+  box-shadow: 30px 0 0 #fff;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 rgba(96, 221, 142, 1);
+  }
+  50% {
+    box-shadow: 0 0 0 rgba(96, 221, 142, 1);
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 rgba(96, 221, 142, 1);
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 0 #fff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #fff;
+    margin-top: 0;
+  }
+}

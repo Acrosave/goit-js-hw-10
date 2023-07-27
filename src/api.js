@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Notiflix from 'notiflix';
 
 axios.defaults.headers.common[
   'x-api-key'
@@ -9,7 +10,9 @@ async function getCats() {
     const response = await axios.get('https://api.thecatapi.com/v1/breeds');
     return response;
   } catch (error) {
-    console.log(error);
+    error = Notiflix.Notify.alert(
+      'Oops! Something went wrong! Try reloading the page!'
+    );
   }
 }
 async function getCatByBreed(id) {
@@ -19,7 +22,10 @@ async function getCatByBreed(id) {
     );
     return response;
   } catch (error) {
-    console.log(error);
+    error = Notiflix.Notify.alert(
+      'Oops! Something went wrong! Try reloading the page!'
+    );
   }
 }
+
 export { getCats, getCatByBreed };
